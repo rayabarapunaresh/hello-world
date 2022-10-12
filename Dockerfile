@@ -1,7 +1,4 @@
-# Pull base image 
-From tomcat:8-jre8 
-
-# Maintainer 
-MAINTAINER "valaxytech@gmail.com" 
-COPY ./webapp.war /usr/local/tomcat/webapps
+From tomcat:8-jre8
+mv /usr/local/tomcat/webapps.dist/* /usr/local/tomcat/webapps
+COPY /var/lib/jenkins/workspace/new-project/webapp/target/webapp.war /usr/local/tomcat/webapps
 
